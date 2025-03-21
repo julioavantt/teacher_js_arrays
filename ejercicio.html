@@ -1,0 +1,48 @@
+<script>
+ let users = [{}, {}, { name: "z", age: 1 }];
+
+ users[0].name = prompt("nombre1");
+ users[0].age = prompt("edad1");
+ users[1].name = prompt("nombre2");
+ users[1].age = prompt("edad2");
+
+ let option = prompt("Opcion");
+
+ switch (option) {
+  // Eliminar último elemento.
+  case "1":
+   users.pop();
+   console.log(users);
+   break;
+  case "2":
+   console.log(users);
+   let userNew = {};
+   userNew.name = prompt("name");
+   userNew.age = prompt("age");
+   users.push(userNew);
+   console.log(users);
+   break;
+  case "3":
+   console.log(users[0].name);
+   break;
+  case "4":
+   let user4 = prompt("name");
+   console.log(users.includes(user4));
+   break;
+  case "5":
+   users.sort((a, b) => a.age - b.age);
+   console.log(users);
+   break;
+  case "6":
+   users.forEach((user) => console.log(user.name, 2025 - user.age));
+   break;
+  case "8":
+   let total = 0;
+   users.forEach((user) => (total = total + user.age));
+   let segundos = total * 365 * 24 * 60 * 60;
+   console.log(segundos);
+   break;
+  default:
+   console.log("fin");
+ }
+</script>

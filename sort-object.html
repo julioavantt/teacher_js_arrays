@@ -1,0 +1,9 @@
+<script>
+ const users = [
+  { names: "Alice", age: 25 },
+  { names: "Bob", age: 30 },
+ ];
+
+ console.log(users.sort((a, b) => b.age - a.age));
+ console.log(users.sort((a, b) => b.names.localeCompare(a.names)));
+</script>

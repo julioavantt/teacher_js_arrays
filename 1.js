@@ -1,13 +1,15 @@
-const arr = [
- { name: "Julio", age: 23 },
- { name: "Lucía", age: 17 },
+const users = [
+ { names: "Alice", age: 17 },
+ { names: "Bob", age: 30 },
+ { names: "Julio", age: 23 },
 ];
 
-let total = 0;
-let promedioEdad = 0;
+total = 0;
+promedio = 0;
 
-arr.forEach((item) => (total += item.age));
-promedioEdad = total / arr.length;
+users.forEach((item) => (total = total + item.age));
 
 total;
-promedioEdad;
+promedio = total / users.length;
+
+promedio;
